@@ -3,7 +3,7 @@ resource "aws_instance" "ec2_ins_farhan" {
 
   ami                         = "ami-0905a3c97561e0b69"
   instance_type               = "t2.micro"
-  vpc_security_group_ids      =  [aws_security_group.aws_sg_farhan.id]
+  vpc_security_group_ids      =  [aws_security_group.aws_sg.id]
   associate_public_ip_address = true
   key_name                    = "farhan_public_key1" # your key here
 
@@ -14,7 +14,7 @@ resource "aws_instance" "ec2_ins_farhan" {
   }
 }
 ## create security group
-resource "aws_security_group" "aws_sg_farhan" {
+resource "aws_security_group" "aws_sg" {
   name = "security group from terraform by farhan"
 
 
