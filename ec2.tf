@@ -14,32 +14,32 @@ resource "aws_instance" "ec2_ins_farhan" {
   }
 }
 ## create security group
-#resource "aws_security_group" "aws_sg" {
-#  name = "security group from terraform by farhan"
+resource "aws_security_group" "aws_sg" {
+  name = "security group from terraform by farhan"
 
 
- # ingress {
- #   description = "SSH from the internet"
- #   from_port   = 22
- #   to_port     = 22
- #   protocol    = "tcp"
- #   cidr_blocks = ["0.0.0.0/0"]
- # }
+  ingress {
+    description = "SSH from the internet"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
-#  ingress {
-#   description = "80 from the internet"
-#    from_port   = 80
-#    to_port     = 80
-#    protocol    = "tcp"
-#    cidr_blocks = ["0.0.0.0/0"]
-#  }
+  ingress {
+   description = "80 from the internet"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 
- # egress {
- #   from_port   = 0
- #   to_port     = 0
- #   protocol    = "-1"
- #   cidr_blocks = ["0.0.0.0/0"]
- # }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   
 } 
 
