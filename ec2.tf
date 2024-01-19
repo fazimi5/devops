@@ -30,7 +30,7 @@ resource "aws_security_group" "aws_sg" {
    description = "8080 from the internet"
     from_port   = 8080
     to_port     = 8080
-    protocol    = "http"
+    protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
