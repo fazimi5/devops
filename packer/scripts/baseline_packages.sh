@@ -1,0 +1,5 @@
+#!/bin/bash
+echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
+sudo apt-get update -y
+sudo apt-get install nginx -y
+sudo echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQD8peS+XRscbjE5PGDfATTwJqdg/NtTMGiyPSixagvukOsOG/xwFL88lB/K10MVxorXGdpWm0On5sVP3BFfYkKvhUUaAizPLluMQ8Jjxukda8Q4eWIa1Je8Fs4izQrzI/vaTc0102cZLRb4amHPeE54VFzdLN7rS/n+zNbYeMpzc5NMB8d94WU81KjgOUJHc5H8Pg29mnvECZaVLFSQ6R6QFRmBciKus8KajWDNyVG2aPK09uGG7bawgdFcE2RErVyNnyyhEod4NWAWfk1bVkf35nkzqHLgoTQaTpY/Z1DaS0OKT9XjUM1rdXMmlBWWvf/jBgAEX4frAoraf6fvkCE66FzcGo+cj7zDYt+zdzfuhyeEJEYUAyFQFQRk3NE5DW7f9T5IKjpqyFOxIlrBEo2ZrFvk+XiqV2Q7uhSBfQbnrOagWRBE0UltA84a2zIkXwJBNTm0O7oc6jWtKQC2GbxLoBuHXDR896dEo3TJVI+U+H1QpWIjv6flpb1q3vrSAF0= ubuntu@ubuntu-VirtualBox" >> /home/ubuntu/.ssh/authorized_keys
